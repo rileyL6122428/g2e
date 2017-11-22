@@ -15,6 +15,8 @@
 
       * Play continues until a win or lose criteria is satisfied.
 
+      * The beginning of playing on a board to finish is a level.
+
       * Each unit comprising a team has a set of stats determining their
         battle performance. These stats include:
 
@@ -42,6 +44,8 @@
               Intelligence + 4 * Skill - Opponents(Speed + Intelligence))
             Damage: Mag - Opponents(Mag Def)
 
+      * Units can move as many spaces as their movement allows them to.
+        They cannot move through enemy units.
 
     **Iteration 2**
     *More Complicated Mechanics*
