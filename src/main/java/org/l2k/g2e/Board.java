@@ -2,7 +2,7 @@ package org.l2k.g2e;
 
 public class Board {
 
-	public Turn getPhase() {
+	public Dimensions getDimensions() {
 		// TODO Auto-generated method stub
 		return null;
 	}

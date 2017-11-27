@@ -1,17 +1,16 @@
 package org.l2k.g2e.unit;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.l2k.g2e.Board;
 import org.l2k.g2e.Level;
 import org.l2k.g2e.TurnManager;
 import org.mockito.Mock;
 
 import name.falgout.jeffrey.testing.junit5.MockitoExtension;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class LevelTest {
@@ -20,10 +19,16 @@ class LevelTest {
 	
 	@Mock
 	private TurnManager turnManager;
+	
+	@Mock
+	private Board board;
 
 	@BeforeEach
 	public void setup() {
-		level = new Level(turnManager);
+		level = new Level(
+			turnManager,
+			board
+		);
 	}
 	
 	@Test
@@ -37,5 +42,11 @@ class LevelTest {
 		level.endTurn();
 		verify(turnManager).endTurn();
 	}
-
+	
+	@Test
+	public void getDimensionsDelegatesToBoard() {
+		level.getDimensions();
+		verify(board).getDimensions();
+	}
+	
 }

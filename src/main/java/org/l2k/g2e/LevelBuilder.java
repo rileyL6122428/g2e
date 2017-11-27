@@ -6,7 +6,8 @@ public class LevelBuilder {
 
 	public Level build() {
 		return new Level(
-			new TurnManager(startingTurn)
+			new TurnManager(startingTurn),
+			null
 		);
 	}
 
@@ -14,6 +15,12 @@ public class LevelBuilder {
 	public LevelBuilder setStartingTurn(Turn startingTurn) {
 		this.startingTurn = startingTurn;
 		return this;
+	}
+
+
+	public LevelBuilder setDimensions(Dimensions dimensions) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
