@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.l2k.g2e.Board;
 import org.l2k.g2e.BoardBuilder;
@@ -38,6 +39,16 @@ class BoardTest {
 		assertEquals(rowTwo.get(0), board.getSpaceAt(0, 1));
 		assertEquals(rowTwo.get(1), board.getSpaceAt(1, 1));
 		assertEquals(rowTwo.get(2), board.getSpaceAt(2, 1));
+	}
+	
+	@Test
+	public void getLengthReturnsTheNumberOfRows() {
+		assertEquals(2, board.getLength());
+	}
+	
+	@Test
+	public void getWidthReturnsTheWidthOfTheFirstRow() {
+		assertEquals(3, board.getWidth());
 	}
 
 }
