@@ -1,5 +1,7 @@
 package org.l2k.g2e;
 
+import java.util.List;
+
 public class LevelBuilder {
 	
 	private Turn startingTurn;
@@ -18,7 +20,7 @@ public class LevelBuilder {
 	}
 
 
-	public LevelBuilder setDimensions(Dimensions dimensions) {
+	public LevelBuilder setSpaces(List<BoardSpace>... rows) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,15 +1,19 @@
 package org.l2k.g2e;
 
-public class BoardBuilder {
+import java.util.ArrayList;
+import java.util.List;
 
-	public BoardBuilder setDimensions(int i, int j) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class BoardBuilder {
+	
+	private List<List<BoardSpace>> rows = new ArrayList<List<BoardSpace>>();
 
 	public Board build() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Board(rows);
+	}
+
+	public BoardBuilder addRow(List<BoardSpace> row) {
+		rows.add(row);
+		return this;
 	}
 
 }

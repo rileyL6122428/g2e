@@ -18,8 +18,12 @@ public class Level {
 		return turnManager.getTurn();
 	}
 
-	public Dimensions getDimensions() {
-		return board.getDimensions();
+	public int getWidth() {
+		return board.getWidth();
+	}
+
+	public int getLength() {
+		return board.getLength();
 	}
 
 }

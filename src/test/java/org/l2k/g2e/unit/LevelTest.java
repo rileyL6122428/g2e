@@ -1,6 +1,8 @@
 package org.l2k.g2e.unit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -44,9 +46,17 @@ class LevelTest {
 	}
 	
 	@Test
-	public void getDimensionsDelegatesToBoard() {
-		level.getDimensions();
-		verify(board).getDimensions();
+	public void getWidthDelegatesToBoard() {
+		when(board.getWidth()).thenReturn(3);
+		int width = level.getWidth();
+		assertEquals(3, width);
+	}
+	
+	@Test
+	public void getLengthDelegatesToBoard() {
+		when(board.getLength()).thenReturn(5);
+		int length = level.getLength();
+		assertEquals(5, length);
 	}
 	
 }
