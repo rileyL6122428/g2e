@@ -48,5 +48,11 @@
         They cannot move through enemy units.
 
     **Iteration 2**
+    *Basic Rendering with Swing*
+
+    **Iteration 3**
+    *Draw shapes*
+
+    **Iteration 4**
     *More Complicated Mechanics*
       * Each unit has a default attack based on their weapon/class:
